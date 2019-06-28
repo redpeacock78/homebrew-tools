@@ -1,6 +1,6 @@
 require "formula"
 
-class Sushiro < Formula
+class Hujitatsu < Formula
   desc "Converts a sentence to Fujiwara Tatsuya-style or restores it."
   homepage "https://github.com/redpeacock78"
   url "https://github.com/redpeacock78/hujitatsu.git"
