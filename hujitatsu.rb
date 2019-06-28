@@ -14,6 +14,6 @@ class Hujitatsu < Formula
   bottle :unneeded
 
   def install
-    bin.install "hujitastu"
+    bin.install "hujitatsu"
   end
 end
