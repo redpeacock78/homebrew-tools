@@ -12,6 +12,7 @@ class Pceconv < Formula
   depends_on "cdrdao"
   depends_on "bchunk"
   depends_on "ffmpeg"
+  depends_on "gawk"
 
   bottle :unneeded
 
