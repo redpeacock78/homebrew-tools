@@ -5,7 +5,7 @@ class Pceconv < Formula
   homepage "https://github.com/redpeacock78"
   url "https://github.com/redpeacock78/pceconv.git"
   head "https://github.com/redpeacock78/pceconv.git", :branch => "master"
-  version '0.0.1'.freeze
+  version '1.00'.freeze
 
   #depends
   depends_on "cdparanoia"
