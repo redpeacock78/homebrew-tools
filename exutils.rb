@@ -1,7 +1,7 @@
 require "formula"
 
 class Exutils < Formula
-  desc "Converts a sentence to Fujiwara Tatsuya-style or restores it."
+  desc "Command line extension utilitys."
   homepage "https://github.com/redpeacock78"
   url "https://github.com/redpeacock78/exutils.git"
   head "https://github.com/redpeacock78/exutils.git", :branch => "master"
