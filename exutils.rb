@@ -14,7 +14,7 @@ class Exutils < Formula
   bottle :unneeded
 
   def install
-    bin.install "prim"
-    bin.install "camb"
+    bin.install "bin/prim"
+    bin.install "bin/camb"
   end
 end
