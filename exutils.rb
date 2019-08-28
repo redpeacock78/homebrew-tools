@@ -16,5 +16,6 @@ class Exutils < Formula
   def install
     bin.install "bin/prim"
     bin.install "bin/camb"
+    bin.install "bin/divi"
   end
 end
