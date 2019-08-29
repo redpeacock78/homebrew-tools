@@ -9,8 +9,8 @@ class Exutils < Formula
 
   #depends
   depends_on "coreutils"
+  depends_on "findutils"
   depends_on "grep"
-  depends_on "gxargs"
   depends_on "gawk"
 
   bottle :unneeded
