@@ -9,7 +9,7 @@ class Exutils < Formula
 
   #depends
   depends_on "coreutils"
-  depends_on "ggrep"
+  depends_on "grep"
   depends_on "gxargs"
   depends_on "gawk"
 
