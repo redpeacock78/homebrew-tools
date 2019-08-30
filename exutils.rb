@@ -10,6 +10,7 @@ class Exutils < Formula
   #depends
   depends_on "coreutils"
   depends_on "findutils"
+  depends_on "bash"
   depends_on "grep"
   depends_on "gawk"
 
