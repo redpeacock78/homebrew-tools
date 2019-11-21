@@ -1,6 +1,6 @@
 require "formula"
 
-class Git_w < Formula
+class GitW < Formula
   desc "It is a subcommand of the git command and displays github.com contribution."
   homepage "https://github.com/redpeacock78"
   url "https://github.com/redpeacock78/git-w.git"
