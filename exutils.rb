@@ -1,7 +1,7 @@
 require "formula"
 
 class Exutils < Formula
-  desc "Command line extension utilitys."
+  desc "Command line extension utilites."
   homepage "https://github.com/redpeacock78"
   url "https://github.com/redpeacock78/exutils.git"
   head "https://github.com/redpeacock78/exutils.git", :branch => "master"
@@ -17,8 +17,11 @@ class Exutils < Formula
   bottle :unneeded
 
   def install
+    bin.install "bin/inv"
     bin.install "bin/prim"
     bin.install "bin/camb"
     bin.install "bin/divi"
+    bin.install "bin/ngram"
+    bin.install "bin/stalin"
   end
 end
