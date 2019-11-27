@@ -12,6 +12,7 @@ class GitW < Formula
   depends_on "findutils"
   depends_on "bash"
   depends_on "grep"
+  depends_on "curl"
   depends_on "git"
 
   bottle :unneeded
