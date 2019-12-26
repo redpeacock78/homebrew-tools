@@ -23,5 +23,6 @@ class Exutils < Formula
     bin.install "bin/divi"
     bin.install "bin/ngram"
     bin.install "bin/stalin"
+    bin.install "bin/rpt"
   end
 end
