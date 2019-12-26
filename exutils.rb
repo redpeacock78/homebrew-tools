@@ -13,6 +13,7 @@ class Exutils < Formula
   depends_on "bash"
   depends_on "grep"
   depends_on "gawk"
+  depends_on "gnu-sed"
 
   bottle :unneeded
 
