@@ -18,7 +18,7 @@ class MltermCocoa < Formula
   depends_on 'libssh2'
 
   def install
-    system "./configure", 'CFLAGS="-I/opt/X11/include/freetype2"', "--prefix=#{prefix}", "--with-typeengines=cairo", "--with-gui=quartz", "--with-gtk=3.0"
+    system "./configure", "--prefix=#{prefix}", "--with-typeengines=cairo", "--with-gui=quartz", "--with-gtk=3.0"
     system "make"
     system "make", "install"
     system "cp -pvr cocoa/mlterm.app /Applications/"
