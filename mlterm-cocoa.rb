@@ -4,7 +4,7 @@ class MltermCocoa < Formula
   homepage "http://mlterm.sourceforge.net/"
   url "https://sourceforge.net/projects/mlterm/files/01release/mlterm-3.8.9/mlterm-3.8.9.tar.gz"
   head "https://bitbucket.org/arakiken/mlterm", :using => :hg
-  sha1 "ab41434fd777ffd173ad0965e7f9dd4500bc6062"
+  sha1 "485d1f3215e12db8cd23f39a5c06b21e3e802307"
   keg_only "Conflicts with non-cocoa mlterm."
 
   depends_on 'pkg-config' => :build
