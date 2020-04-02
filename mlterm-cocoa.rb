@@ -8,9 +8,14 @@ class MltermCocoa < Formula
   keg_only "Conflicts with non-cocoa mlterm."
 
   depends_on 'pkg-config' => :build
+  depends_on 'gdk-pixbuf'
+  depends_on 'cairo'
+  depends_on 'sdl2'
+  depends_on 'sdl2_ttf'
+  depends_on 'fontconfig'
 
   def install
-    system "./configure", "--prefix=#{prefix}", "--with-gui=quartz"
+    system "./configure", 'CFLAGS="-I/opt/X11/include/freetype2"', "--prefix=#{prefix}", "--with-typeengine=cairo"
     system "make"
     system "make", "install"
     system "cp -pvr cocoa/mlterm.app /Applications/"
