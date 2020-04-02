@@ -15,7 +15,7 @@ class MltermCocoa < Formula
   depends_on 'fontconfig'
 
   def install
-    system "./configure", 'CFLAGS="-I/opt/X11/include/freetype2"', "--prefix=#{prefix}", "--with-typeengine=cairo" "--with-gui=quartz"
+    system "./configure", 'CFLAGS="-I/opt/X11/include/freetype2"', "--prefix=#{prefix}", "--with-typeengine=cairo", "--with-gui=quartz"
     system "make"
     system "make", "install"
     system "cp -pvr cocoa/mlterm.app /Applications/"
