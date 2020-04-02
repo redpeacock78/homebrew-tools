@@ -13,9 +13,12 @@ class MltermCocoa < Formula
   depends_on 'sdl2'
   depends_on 'sdl2_ttf'
   depends_on 'fontconfig'
+  depends_on 'fribidi'
+  depends_on 'gtk+3'
+  depends_on 'libssh2'
 
   def install
-    system "./configure", 'CFLAGS="-I/opt/X11/include/freetype2"', "--prefix=#{prefix}", "--with-typeengine=cairo", "--with-gui=quartz"
+    system "./configure", 'CFLAGS="-I/opt/X11/include/freetype2"', "--prefix=#{prefix}", "--with-typeengines=cairo", "--with-gui=quartz", "--with-gtk=3.0"
     system "make"
     system "make", "install"
     system "cp -pvr cocoa/mlterm.app /Applications/"
