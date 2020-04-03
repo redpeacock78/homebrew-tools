@@ -9,11 +9,9 @@ class Yaftx < Formula
 
 	depends_on :x11
 
-	patch :DATA
-
 	def install
 		ENV['LANG'] = 'en_US.UTF-8'
 		system "make", "yaftx"
-		bin.install "yaftx"
+		system "make", "installx"
 	end
 end
