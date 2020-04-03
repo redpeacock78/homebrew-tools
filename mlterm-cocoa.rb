@@ -16,6 +16,7 @@ class MltermCocoa < Formula
   depends_on 'fribidi'
   depends_on 'gtk+3'
   depends_on 'libssh2'
+  depends_on 'gettext'
 
   def install
     system "./configure", "--with-gui=quartz", "--prefix=#{prefix}"
