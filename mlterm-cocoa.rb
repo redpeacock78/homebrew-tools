@@ -18,6 +18,7 @@ class MltermCocoa < Formula
   depends_on 'libssh2'
 
   def install
+  	ENV['CFLAGS'] = '-I/opt/X11/include/freetype2/freetype'
     system "./configure", "--prefix=#{prefix}", "--with-typeengines=cairo", "--with-gui=quartz", "--with-gtk=3.0"
     system "make"
     system "make", "install"
