@@ -18,11 +18,11 @@ class MltermCocoa < Formula
   depends_on 'libssh2'
 
   def install
-    system "./configure", "--with-gui=quartz", "--config-cache", "--prefix=#{prefix}"
+    system "./configure", "--with-gui=quartz", "--prefix=#{prefix}"
     system "make"
     system "make", "install"
     system "cp -pvr cocoa/mlterm.app /Applications/"
     system "mkdir -p /Applications/mlterm.app/Contents/MacOS"
-    system "HOME=/Applications $(top_srcdir)/cocoa/install.sh #{prefix}"
+    system "HOME=/Applications cocoa/install.sh #{prefix}"
   end
 end
