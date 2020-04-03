@@ -5,6 +5,7 @@ class MltermCocoa < Formula
   url "https://downloads.sourceforge.net/project/mlterm/01release/mlterm-3.8.9/mlterm-3.8.9.tar.gz"
   head "https://bitbucket.org/arakiken/mlterm", :using => :hg
   sha256 "0d5f18c3986cc80cb8d0b1d8720a45be5eb85b2b908016f2f396bd5112e6c7c7"
+  version "3.8.9".freeze 
 
   depends_on :x11
   depends_on 'gdk-pixbuf'
