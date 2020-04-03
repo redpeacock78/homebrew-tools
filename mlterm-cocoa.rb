@@ -19,7 +19,7 @@ class MltermCocoa < Formula
   depends_on 'gettext'
 
   def install
-    system "./configure", 'CFLAGS="-I/opt/X11/include/freetype2"', "--with-gui=quartz", "--with-type-engines=cairo", "--prefix=#{prefix}"
+    system "./configure", "--with-gui=quartz", "--with-type-engines=cairo", "--with-gtk=3.0", "--prefix=#{prefix}"
     system "make"
     system "make", "install"
     system "cp -pvr cocoa/mlterm.app /Applications/"
