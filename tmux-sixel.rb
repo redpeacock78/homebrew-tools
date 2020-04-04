@@ -35,7 +35,7 @@ class TmuxSixel < Formula
   end
 
   def install
-    system "sh", "autogen.sh" if build.head?
+    system "sh", "autogen.sh"
     ENV.append "LDFLAGS", "-lresolv"
     system "./configure"
     system "make", "install"
