@@ -2,7 +2,7 @@ require "formula"
 
 class TmuxSixel < Formula
   desc "Terminal multiplexer with Sixel."
-  homepage "https://tmux.github.io/"
+  homepage "https://github.com/saitoha/tmux-SIXEL"
   url "https://github.com/saitoha/tmux-SIXEL.git", :branch => "sixel"
   head "https://github.com/saitoha/tmux-SIXEL.git", :branch => "sixel"
   version "2.1".freeze
