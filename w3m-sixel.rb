@@ -3,7 +3,6 @@ require "formula"
 class W3mSixel < Formula
   desc "Pager/text based browser with Sixel."
   homepage "https://w3m.sourceforge.io/"
-  revision 6
   head "https://github.com/tats/w3m.git", :branch => "master"
 
   stable do
