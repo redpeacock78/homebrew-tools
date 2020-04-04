@@ -50,6 +50,6 @@ class W3mSixel < Formula
   end
 
   test do
-    assert_match /DuckDuckGo/, shell_output("#{bin}/w3m -dump https://duckduckgo.com")
+    assert_match /DuckDuckGo/, shell_output("#{bin}/w3m-sixel -dump https://duckduckgo.com")
   end
 end
