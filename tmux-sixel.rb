@@ -7,13 +7,6 @@ class TmuxSixel < Formula
   sha256 "4ad1df28b4afa969e59c08061b45082fdc49ff512f30fc8e43217d7b0e5f8db9"
   revision 1
 
-  bottle do
-    cellar :any
-    sha256 "d83b378969a8af595451db10bf4b8eb251a8ed4217cb13e161b3dbe20330d1f8" => :catalina
-    sha256 "4acca70a1bba7bb762081015373c438a930af6a6b28e9e1409c4b84ae78ad514" => :mojave
-    sha256 "bc934e88baba7f0549c3b5916ed19211764ecaf6c95e46624c2f641b631abdb9" => :high_sierra
-  end
-
   head do
     url "https://github.com/tmux/tmux.git"
 
