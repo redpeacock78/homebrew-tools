@@ -5,7 +5,7 @@ class TmuxSixel < Formula
   homepage "https://tmux.github.io/"
   url "https://github.com/tmux/tmux.git", :branch => "sixel"
   head "https://github.com/tmux/tmux.git", :branch => "sixel"
-  revision 1
+  version "next-3.2".freeze
 
   head do
     url "https://github.com/tmux/tmux.git"
@@ -20,6 +20,8 @@ class TmuxSixel < Formula
   depends_on "ncurses"
   depends_on "utf8proc"
   depends_on "libsixel"
+
+  bottle :unneeded
 
   resource "completion" do
     url "https://raw.githubusercontent.com/imomaliev/tmux-bash-completion/homebrew_1.0.0/completions/tmux"
