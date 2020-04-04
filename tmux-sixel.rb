@@ -7,14 +7,9 @@ class TmuxSixel < Formula
   head "https://github.com/tmux/tmux.git", :branch => "sixel"
   version "next-3.2".freeze
 
-  head do
-    url "https://github.com/tmux/tmux.git"
-
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-  end
-
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
   depends_on "pkg-config" => :build
   depends_on "libevent"
   depends_on "ncurses"
