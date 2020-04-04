@@ -1,7 +1,7 @@
 require "formula"
 
-class Tmux < Formula
-  desc "Terminal multiplexer"
+class TmuxSixel < Formula
+  desc "Terminal multiplexer with Sixel."
   homepage "https://tmux.github.io/"
   url "https://github.com/tmux/tmux/releases/download/3.0a/tmux-3.0a.tar.gz"
   sha256 "4ad1df28b4afa969e59c08061b45082fdc49ff512f30fc8e43217d7b0e5f8db9"
