@@ -3,9 +3,9 @@ require "formula"
 class TmuxSixel < Formula
   desc "Terminal multiplexer with Sixel."
   homepage "https://tmux.github.io/"
-  url "https://github.com/tmux/tmux.git", :branch => "sixel"
-  head "https://github.com/tmux/tmux.git", :branch => "sixel"
-  version "next-3.2".freeze
+  url "https://github.com/saitoha/tmux-SIXEL.git", :branch => "sixel"
+  head "https://github.com/saitoha/tmux-SIXEL.git", :branch => "sixel"
+  version "2.1".freeze
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
@@ -23,17 +23,13 @@ class TmuxSixel < Formula
     sha256 "05e79fc1ecb27637dc9d6a52c315b8f207cf010cdcee9928805525076c9020ae"
   end
 
-  def patches
-    [
-      "https://gist.githubusercontent.com/redpeacock78/42d7c3d5711a363492efe9d2da50a176/raw/ecce53cebef0b161a2f74e219e95ce54a2d9a89e/tmux-sixel.patch"
-    ]
-  end
-
   def install
     system "sh", "autogen.sh"
     ENV.append "LDFLAGS", "-lresolv"
     system "./configure"
-    system "make", "install"
+    system "make"
+    system "mv", "tmux", "tmux-sixel"
+    bin.install "tmux-sixel"
 
     pkgshare.install "example_tmux.conf"
     bash_completion.install resource("completion")
