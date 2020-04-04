@@ -36,6 +36,12 @@ class W3mSixel < Formula
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
 
+  def patches
+    [
+      "https://gist.githubusercontent.com/redpeacock78/378c445c3429734a0aa3499e9b2cb059/raw/a594f0f9e35c6160e60c0f81ee433518efdf89a5/w3m-sixel.patch"
+    ]
+  end
+
   def install
     system "./configure", "--prefix=#{prefix}",
                           "--enable-image",
