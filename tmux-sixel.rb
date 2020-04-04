@@ -18,11 +18,6 @@ class TmuxSixel < Formula
 
   bottle :unneeded
 
-  resource "completion" do
-    url "https://raw.githubusercontent.com/imomaliev/tmux-bash-completion/homebrew_1.0.0/completions/tmux"
-    sha256 "05e79fc1ecb27637dc9d6a52c315b8f207cf010cdcee9928805525076c9020ae"
-  end
-
   def install
     system "sh", "autogen.sh"
     ENV.append "LDFLAGS", "-lresolv"
@@ -30,16 +25,6 @@ class TmuxSixel < Formula
     system "make"
     system "mv", "tmux", "tmux-sixel"
     bin.install "tmux-sixel"
-
-    pkgshare.install "example_tmux.conf"
-    bash_completion.install resource("completion")
-  end
-
-  def caveats
-    <<~EOS
-      Example configuration has been installed to:
-        #{opt_pkgshare}
-    EOS
   end
 
   test do
