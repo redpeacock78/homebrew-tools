@@ -3,8 +3,8 @@ require "formula"
 class TmuxSixel < Formula
   desc "Terminal multiplexer with Sixel."
   homepage "https://tmux.github.io/"
-  url "https://github.com/tmux/tmux/releases/download/3.0a/tmux-3.0a.tar.gz"
-  sha256 "4ad1df28b4afa969e59c08061b45082fdc49ff512f30fc8e43217d7b0e5f8db9"
+  url "https://github.com/tmux/tmux.git", :branch => "sixel"
+  head "https://github.com/tmux/tmux.git", :branch => "sixel"
   revision 1
 
   head do
@@ -26,17 +26,6 @@ class TmuxSixel < Formula
     sha256 "05e79fc1ecb27637dc9d6a52c315b8f207cf010cdcee9928805525076c9020ae"
   end
 
-  def install
-    system "sh", "autogen.sh" if build.head?
-
-    args = %W[
-      --enable-utf8proc
-      --disable-dependency-tracking
-      --prefix=#{prefix}
-      --sysconfdir=#{etc}
-    ]
-  end
-
   def patches
     [
       "https://gist.githubusercontent.com/redpeacock78/42d7c3d5711a363492efe9d2da50a176/raw/6061b987d6afd3afcf319e6da44c50a1f3dd1a12/tmux-sixel.patch"
@@ -44,9 +33,9 @@ class TmuxSixel < Formula
   end
 
   def install
+    system "sh", "autogen.sh" if build.head?
     ENV.append "LDFLAGS", "-lresolv"
-    system "./configure", *args
-
+    system "./configure"
     system "make", "install"
 
     pkgshare.install "example_tmux.conf"
