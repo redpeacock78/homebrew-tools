@@ -30,7 +30,7 @@ class TmuxSixel < Formula
 
   def patches
     [
-      "https://gist.githubusercontent.com/redpeacock78/42d7c3d5711a363492efe9d2da50a176/raw/6061b987d6afd3afcf319e6da44c50a1f3dd1a12/tmux-sixel.patch"
+      "https://gist.githubusercontent.com/redpeacock78/42d7c3d5711a363492efe9d2da50a176/raw/ecce53cebef0b161a2f74e219e95ce54a2d9a89e/tmux-sixel.patch"
     ]
   end
 
