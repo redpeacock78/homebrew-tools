@@ -17,11 +17,12 @@ class MltermCocoa < Formula
   depends_on 'gtk+3'
   depends_on 'libssh2'
   depends_on 'gettext'
+  depends_on :x11
 
   def install
     system "./configure", "--with-gui=quartz", "--with-type-engines=cairo", "--with-imagelib=gdk-pixbuf", "--with-gtk=3.0", "--prefix=#{prefix}"
     system "make"
-    system "sudo", "make", "install"
+    system "make", "install"
     system "cp -pvr cocoa/mlterm.app /Applications/"
     system "mkdir -p /Applications/mlterm.app/Contents/MacOS"
     system "HOME=/Applications cocoa/install.sh #{prefix}"
