@@ -2,9 +2,9 @@ require "formula"
 
 class MltermCocoa < Formula
   homepage "http://mlterm.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/mlterm/01release/mlterm-3.6.0/mlterm-3.6.0.tar.gz"
+  url "https://downloads.sourceforge.net/project/mlterm/01release/mlterm-3.8.8/mlterm-3.8.8.tar.gz"
   head "https://bitbucket.org/arakiken/mlterm", :using => :hg
-  sha256 "b6b08e3ce3c2136ed091776f0bb3b9ad0b7070bc2d845c9debe6e2cdc34cec05"
+  sha256 "bf3eca9ddafcc463e4723be1fabe7ffe0993c3d050dc93f6f745f43ccc57603cb"
   version "3.6.0".freeze
 
   depends_on 'pkg-config' => :build
