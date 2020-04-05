@@ -8,6 +8,7 @@ class MltermCocoa < Formula
   version "3.8.8".freeze
 
   depends_on 'pkg-config' => :build
+  depends_on 'libtool' => :build
   depends_on 'gdk-pixbuf'
   depends_on 'cairo'
   depends_on 'sdl2'
