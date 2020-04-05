@@ -21,7 +21,7 @@ class MltermCocoa < Formula
   def install
     system "./configure", "--with-gui=quartz", "--with-type-engines=cairo", "--with-imagelib=gdk-pixbuf", "--with-gtk=3.0", "--prefix=#{prefix}"
     system "make"
-    system "make", "install"
+    system "sudo", "make", "install"
     system "cp -pvr cocoa/mlterm.app /Applications/"
     system "mkdir -p /Applications/mlterm.app/Contents/MacOS"
     system "HOME=/Applications cocoa/install.sh #{prefix}"
