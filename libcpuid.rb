@@ -13,7 +13,7 @@ class Libcpuid < Formula
     depends_on 'libtool' => :build
 
     def install
-        system "type", "libtoolize", "&&", ":", "||", "alias", "libtoolize=glibtoolize"
+        system "type", "libtoolize", "2&>1", "/dev/null", "&&", ":", "||", "alias", "libtoolize='glibtoolize'"
         system "libtoolize"
         system "autoreconf", "--install"
         system "./configure", "$(brew diy)"
