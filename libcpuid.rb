@@ -1,6 +1,6 @@
 require "formula"
 
-class Libcpuid < formula
+class Libcpuid < Formula
     desc "libcpuid is a small C library for x86 CPU detection and feature extraction."
     homepage "http://libcpuid.sourceforge.net"
     url "https://github.com/anrieff/libcpuid.git"
