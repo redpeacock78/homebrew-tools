@@ -11,7 +11,6 @@ class Pciutils < Formula
     depends_on "pkg-config" => :build
 
     def install
-        system "make", "PREFIX=#{prefix}", "SHARED=yes"
-        system "make", "install", "install-lib"
+        system "make", "PREFIX=#{prefix}", "SHARED=yes", "install", "install-lib"
     end
 end
