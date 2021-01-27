@@ -11,7 +11,7 @@ class CieSh < Formula
   bottle :unneeded
 
   def install
-    libexec.install Dir["libexec/*"]
+    libexec.install Dir["*"]
     bin.write_exec_script libexec/"lab"
   end
 
