@@ -12,7 +12,7 @@ class CieSh < Formula
 
   def install
     libexec.install Dir["libexec/*"]
-    bin.install_exec_script libexec/"lab"
+    bin.write_exec_script libexec/"lab"
   end
 
   test do
