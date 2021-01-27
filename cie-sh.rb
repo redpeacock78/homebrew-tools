@@ -16,4 +16,5 @@ class CieSh < Formula
 
   test do
     assert_match "9.4706", shell_output("#{bin}/lab -dE00 50 50 0 40 50 0")
+  end
 end
