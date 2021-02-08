@@ -12,6 +12,7 @@ class CieSh < Formula
 
   def install
     bin.install Dir["bin/*"]
+    libexec.mkpath
     libexec.install Dir["libexec/*"]
   end
 
