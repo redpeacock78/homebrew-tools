@@ -11,9 +11,8 @@ class CieSh < Formula
   bottle :unneeded
 
   def install
-    bin.install Dir["bin/*"]
-    libexec.mkpath
-    libexec.install Dir["libexec/*"]
+    system "mkdir", "-p", "#{HOMEBREW_PREFIX}/libexec"
+    system "./install.sh", prefix
   end
 
   test do
