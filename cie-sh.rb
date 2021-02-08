@@ -11,13 +11,8 @@ class CieSh < Formula
   bottle :unneeded
 
   def install
-    system "./install.sh", prefix
-    libexec.install "libexec/lab-error"
-    libexec.install "libexec/lab-exec-calc"
-    libexec.install "libexec/lab-exec-dE76"
-    libexec.install "libexec/lab-exec-dE94"
-    libexec.install "libexec/lab-exec-dE00"
-    libexec.install "libexec/lab-judge-args"
+    bin.install Dir["bin/*"]
+    libexec.install Dir["libexec/*"]
   end
 
   test do
