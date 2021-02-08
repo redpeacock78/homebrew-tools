@@ -11,7 +11,7 @@ class CieSh < Formula
   bottle :unneeded
 
   def install
-    system "mkdir", "-p", "#{HOMEBREW_PREFIX}/libexec"
+    mkdir_p "#{HOMEBREW_PREFIX}/libexec"
     system "./install.sh", prefix
   end
 
