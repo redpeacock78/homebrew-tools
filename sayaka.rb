@@ -10,6 +10,7 @@ class Sayaka < Formula
   depends_on "gcc"
   depends_on "mbedtls"
   depends_on "libjpeg"
+  depends_on "libpng"
   depends_on "bsdmake"
 
     def install
