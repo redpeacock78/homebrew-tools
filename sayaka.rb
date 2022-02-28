@@ -7,15 +7,14 @@ class Sayaka < Formula
   head "https://github.com/isaki68k/sayaka.git", :branch => "master"
   version "3.5.3".freeze
 
-  depends_on "vala"
-  depends_on "glib"
-  depends_on "gdk-pixbuf"
+  depends_on "gcc"
+  depends_on "mbedtls"
   depends_on "libjpeg"
-  depends_on "make"
+  depends_on "bsdmake"
 
     def install
     system "./configure"
-    system "make", "all"
+    system "bsdmake", "all"
     bin.install "src/sayaka"
     bin.install "src/sixelv"
   end
