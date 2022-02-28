@@ -14,7 +14,6 @@ class Sayaka < Formula
   depends_on "make"
 
     def install
-        system "./configure"
         system "make"
         bin.install "vala/sayaka"
   end
