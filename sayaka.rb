@@ -5,7 +5,7 @@ class Sayaka < Formula
   homepage "https://github.com/isaki68k/sayaka"
   url "https://github.com/isaki68k/sayaka.git"
   head "https://github.com/isaki68k/sayaka.git", :branch => "master"
-  version "3.4.3".freeze
+  version "3.5.3".freeze
 
   depends_on "vala"
   depends_on "glib"
@@ -14,7 +14,9 @@ class Sayaka < Formula
   depends_on "make"
 
     def install
-    system "gmake"
-    bin.install "vala/sayaka"
+    system "./configure"
+    system "make", "all"
+    bin.install "src/sayaka"
+    bin.install "src/sixelv"
   end
 end
