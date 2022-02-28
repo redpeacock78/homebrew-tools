@@ -13,9 +13,7 @@ class Sayaka < Formula
   depends_on "libjpeg"
   depends_on "make"
 
-  bottle :unneeded
-
-  def install
+    def install
     system "gmake"
     bin.install "vala/sayaka"
   end

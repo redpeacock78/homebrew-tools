@@ -12,9 +12,7 @@ class Sushiro < Formula
   depends_on "curl"
   depends_on "coreutils"
 
-  bottle :unneeded
-
-  def install
+    def install
     bin.install "sushiro"
   end
 end

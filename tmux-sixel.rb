@@ -16,9 +16,7 @@ class TmuxSixel < Formula
   depends_on "utf8proc"
   depends_on "libsixel"
 
-  bottle :unneeded
-
-  def install
+    def install
     system "sh", "autogen.sh"
     ENV.append "LDFLAGS", "-lresolv"
     system "./configure"

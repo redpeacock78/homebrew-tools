@@ -14,9 +14,7 @@ class Pceconv < Formula
   depends_on "ffmpeg"
   depends_on "gawk"
 
-  bottle :unneeded
-
-  def install
+    def install
     bin.install "pceconv"
   end
 end

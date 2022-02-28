@@ -8,9 +8,7 @@ class CieSh < Formula
   license "MIT"
   version '0.0.1'.freeze
 
-  bottle :unneeded
-
-  def install
+    def install
     mkdir_p "#{HOMEBREW_PREFIX}/libexec"
     system "./install.sh", prefix
   end

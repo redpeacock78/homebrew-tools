@@ -15,9 +15,7 @@ class GitW < Formula
   depends_on "curl"
   depends_on "git"
 
-  bottle :unneeded
-
-  def install
+    def install
     bin.install "git-w"
   end
 end

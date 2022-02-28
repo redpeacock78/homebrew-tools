@@ -11,9 +11,7 @@ class Hujitatsu < Formula
   depends_on "nkf"
   depends_on "vim"
 
-  bottle :unneeded
-
-  def install
+    def install
     bin.install "hujitatsu"
   end
 end

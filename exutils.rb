@@ -15,9 +15,7 @@ class Exutils < Formula
   depends_on "gawk"
   depends_on "gnu-sed"
 
-  bottle :unneeded
-
-  def install
+    def install
     bin.install "bin/inv"
     bin.install "bin/prim"
     bin.install "bin/camb"
