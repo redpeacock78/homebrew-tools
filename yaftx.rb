@@ -7,7 +7,7 @@ class Yaftx < Formula
 	head "https://github.com/uobikiemukot/yaft.git", :branch => "master"
 	sha256 "5dfdf0c12d64638527eef4df9b17151c7c60bcc006ab976583de71a792083556"
 
-	depends_on :x11
+	depends_on "libx11"
 
 	def install
 		ENV['LANG'] = 'en_US.UTF-8'

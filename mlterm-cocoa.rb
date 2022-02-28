@@ -18,7 +18,7 @@ class MltermCocoa < Formula
   depends_on 'gtk+3'
   depends_on 'libssh2'
   depends_on 'gettext'
-  depends_on :x11
+  depends_on "libx11"
 
   def install
     system "./configure", "--with-gui=quartz", "--with-type-engines=cairo", "--with-imagelib=gdk-pixbuf", "--with-gtk=3.0", "--prefix=#{prefix}"
