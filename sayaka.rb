@@ -13,6 +13,7 @@ class Sayaka < Formula
   depends_on "wslay"
   depends_on "webp"
   depends_on "mbedtls"
+  depends_on "libiconv"
 
     def install
         system "./configure"
