@@ -16,7 +16,7 @@ class Sayaka < Formula
   depends_on "libiconv"
 
     def install
-        system "CXX=g++", "./configure"
+        system "CXX=g++ ./configure"
         system "bsdmake", "-DRELEASE", "sayaka"
         bin.install "sayaka"
   end
