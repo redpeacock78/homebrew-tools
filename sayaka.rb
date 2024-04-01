@@ -17,7 +17,7 @@ class Sayaka < Formula
 
     def install
         system "./configure"
-        system "CXX=g++ bsdmake -DRELEASE sayaka"
+        system "CC=gcc CXX=g++ bsdmake -DRELEASE sayaka"
         bin.install "sayaka"
   end
 end
